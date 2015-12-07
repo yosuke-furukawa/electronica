@@ -1,0 +1,28 @@
+{
+  "name": "electronica",
+  "version": "0.1.0",
+  "description": "Electron workshop application",
+  "main": "./index.js",
+  "bin": "./electronica.js",
+  "script": {
+    "postinstall": "./script/copyToTmp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yosuke-furukawa/electronica.git"
+  },
+  "keywords": [
+    "electron",
+    "workshopper"
+  ],
+  "author": "yosuke-furukawa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yosuke-furukawa/electronica/issues"
+  },
+  "homepage": "https://github.com/yosuke-furukawa/electronica#readme",
+  "dependencies": {
+    "workshopper-adventure": "^3.4.5",
+    "workshopper-exercise": "^2.5.3"
+  }
+}
