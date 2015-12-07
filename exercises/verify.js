@@ -4,6 +4,7 @@ const cp = require('child_process');
 const os = require('os');
 const path = require('path');
 const executeFilePath = path.join(os.tmpDir(), './program.js');
+console.log(executeFilePath);
 
 module.exports = function() {
 

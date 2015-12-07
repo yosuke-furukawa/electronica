@@ -1,6 +1,7 @@
 {
 	"subtitle": "Electron workshop",
 	"exercise": {
-		"HELLO ELECTRON": "HELLO ELECTRON"
+		"HELLO ELECTRON": "HELLO ELECTRON",
+		"APPLICATION PACKAGING": "APPLICATION PACKAGING"
 	}
 }
