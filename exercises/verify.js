@@ -1,26 +1,18 @@
 "use strict";
 
-const cp = require('child_process');
-const os = require('os');
 const path = require('path');
-const executeFilePath = path.join(os.tmpDir(), './program.js');
-console.log(executeFilePath);
+const fs = require('fs');
+const workshopperExercise = require('workshopper-exercise');
+const expectedKeywords = [/done/i, /button/i, /script/i];
 
 module.exports = function() {
-
-  const env = Object.assign(process.env, { parent_filename: module.parent.parent.filename });
-  cp.exec(`electronica verify ${executeFilePath}`, {
-    env: env
-  }, function(err, stdout, stderr){
-    if (err || stderr) {
-      console.error(err || stderr);
-      console.error("FAILED!!!!!!");
-    } else if (!stdout) {
-      console.error("Result is empty");
-      console.error("FAILED!!!!!!");
-    } else {
-      console.log(stdout);
-      console.log("Congrats!!!!!!");
-    }
-  })
+  const file = module.parent.parent.filename;
+  const content = fs.readFileSync(file).toString();
+  const answers = expectedKeywords.filter((keyword) => content.match(keyword));
+  console.log(workshopperExercise);
+  if (answers.length === expectedKeywords.length) {
+    console.log(`Congrats`);
+  } else {
+    console.log(`Failure`);
+  }
 };

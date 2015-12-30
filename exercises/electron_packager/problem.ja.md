@@ -47,7 +47,7 @@ $ npm install electron-packager -g
 ```
 
 ```
-$ electron-packager <source directory> <app name> --platfrom=<platform> --arch=<arch> --version=<electron version>
+$ electron-packager <source directory> <app name> --platform=<platform> --arch=<arch> --version=<electron version>
 ```
 
 

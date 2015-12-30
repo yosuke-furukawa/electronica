@@ -6,14 +6,14 @@
 まず最初に `Electron` を作るための環境構築をしましょう。
 
 ```
-$ mkdir electronica
-$ cd electronica
+$ mkdir electronica_test
+$ cd electronica_test
 $ npm init -y
 ```
 
 # Hello Electron アプリケーションを作る
 
-electronica フォルダの中で `index.js` という名前のファイルを作り中身を下記のように記述してください。
+`electronica_test` フォルダの中で `index.js` という名前のファイルを作り中身を下記のように記述してください。
 
 ```javascript
 'use strict';
@@ -90,7 +90,7 @@ $ npm install electron-prebuilt --save
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "start": "electron index.js" // scriptsに electron index.js を足す
+    "start": "electron index.js"
   },
   "devDependencies": {
     "electron-prebuilt": "^0.35.0"
@@ -98,7 +98,11 @@ $ npm install electron-prebuilt --save
 }
 ```
 
-これを実行したら、ブラウザが起動し、下記のような情報が表示されていることを確認してください。
+```
+$ npm start
+```
+
+実行したら、ブラウザが起動し、下記のような情報が表示されていることを確認してください。
 
 ```
 node version 4.1.1
