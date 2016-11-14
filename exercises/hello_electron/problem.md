@@ -22,7 +22,10 @@ const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 
 // Report crashes to our server.
-electron.crashReporter.start();
+electron.crashReporter.start({
+  'companyName': '',
+  'submitURL': ''
+});
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
